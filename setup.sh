@@ -41,6 +41,7 @@ mkdir /cantaloupe
 mkdir /cantaloupe/lib
 mkdir /cantaloupe/cache
 mkdir /cantaloupe/logs
+mkdir /cantaloupe/images
 
 # Download Cantaloupe
 wget -q http://central.maven.org/maven2/mysql/mysql-connector-java/$MYSQL_LIB_VERSION/mysql-connector-java-$MYSQL_LIB_VERSION.jar -O /cantaloupe/lib/mysql-connector.jar
