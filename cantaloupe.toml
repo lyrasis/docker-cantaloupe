@@ -1,0 +1,5 @@
+[template]
+src = "cantaloupe.properties"
+dest = "/cantaloupe/cantaloupe.properties"
+group = "cantaloupe"
+owner = "cantaloupe"
