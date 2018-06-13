@@ -1,7 +1,7 @@
 #!/bin/bash
 
 MYSQL_LIB_VERSION=5.1.44
-CANTALOUPE_VERSION=3.4.2
+CANTALOUPE_VERSION=4.0
 GOSU_VERSION=1.10
 OPENJPEG_VERSION=2.3.0
 
@@ -47,8 +47,9 @@ mkdir /cantaloupe/images
 wget -q http://central.maven.org/maven2/mysql/mysql-connector-java/$MYSQL_LIB_VERSION/mysql-connector-java-$MYSQL_LIB_VERSION.jar -O /cantaloupe/lib/mysql-connector.jar
 wget -q https://github.com/medusa-project/cantaloupe/releases/download/v$CANTALOUPE_VERSION/Cantaloupe-$CANTALOUPE_VERSION.zip -O /cantaloupe/cantaloupe.zip
 unzip /cantaloupe/cantaloupe.zip -d /cantaloupe
-mv /cantaloupe/Cantaloupe-$CANTALOUPE_VERSION/Cantaloupe-$CANTALOUPE_VERSION.war /cantaloupe/cantaloupe.war
-rm -Rf /cantaloupe/Cantaloupe-$CANTALOUPE_VERSION
+mv /cantaloupe/cantaloupe-$CANTALOUPE_VERSION/cantaloupe-$CANTALOUPE_VERSION.war /cantaloupe/cantaloupe.war
+mv /cantaloupe/cantaloupe-$CANTALOUPE_VERSION/delegates.rb.sample /cantaloupe/delegates.rb
+rm -Rf /cantaloupe/cantaloupe-$CANTALOUPE_VERSION
 rm /cantaloupe/cantaloupe.zip
 
 # Setup confd templates
